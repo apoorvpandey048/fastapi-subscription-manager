@@ -7,7 +7,7 @@ from typing import List
 from ..database import get_db
 from ..models import Subscription, SubscriptionStatus
 from ..schemas import SubscriptionCreate, SubscriptionUpdate, SubscriptionResponse
-from ..utils.email_utils import send_email, create_expiry_email
+from ..utils.email_utils import send_email
 
 router = APIRouter(prefix="/subscriptions", tags=["subscriptions"])
 
