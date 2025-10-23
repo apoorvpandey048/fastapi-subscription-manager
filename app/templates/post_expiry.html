@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Subscription Expired</h1>
+    </div>
+    <div class="content">
+        <p>Dear {{ user_email }},</p>
+        <p>Your subscription has expired on <strong>{{ end_date }}</strong>.</p>
+        <p>To regain access to our services, please renew your subscription as soon as possible.</p>
+        <center>
+            <a href="{{ renewal_link }}" class="button">Renew Subscription</a>
+        </center>
+        <p>If you have any questions or need assistance, our support team is here to help.</p>
+        <p>Best regards,<br>Subscription Manager Team</p>
+    </div>
+</body>
+</html>
